@@ -43,6 +43,7 @@ public class DriverFactory {
 
     private void instantiateWebDriver(DriverType driverType) {
         System.out.println(" ");
+        System.out.println("Current thread: " + Thread.currentThread().getId());
         System.out.println("Local Operating System: " + operatingSystem);
         System.out.println("Local Architecture: " + systemArchitecture);
         System.out.println("Selected Browser: " + selectedDriverType);
