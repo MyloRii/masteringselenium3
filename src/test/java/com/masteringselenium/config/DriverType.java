@@ -19,6 +19,7 @@ public enum DriverType implements DriverSetup {
             chromePreferences.put("profile.password_manager_enabled", false); //no asking to save login details
             ChromeOptions options = new ChromeOptions();
             options.merge(capabilities);
+            options.setHeadless(HEADLESS);
             options.addArguments("--no-default-browser-check"); //no asking to make chrome default
             options.setExperimentalOption("prefs", chromePreferences);
             return new ChromeDriver(options);
@@ -28,6 +29,7 @@ public enum DriverType implements DriverSetup {
         public RemoteWebDriver getWebDriverObject(DesiredCapabilities capabilities) {
             FirefoxOptions options = new FirefoxOptions();
             options.merge(capabilities);
+            options.setHeadless(HEADLESS);
             return new FirefoxDriver(options);
         }
     },
@@ -43,5 +45,7 @@ public enum DriverType implements DriverSetup {
                     REQUIRE_WINDOW_FOCUS, true);
             return new InternetExplorerDriver(options);
         }
-    }
+    };
+
+    public final static boolean HEADLESS = Boolean.getBoolean("headless");
 }

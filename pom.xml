@@ -25,6 +25,7 @@
         <!-- Configurable variables -->
         <threads>1</threads>
         <browser>chrome</browser>
+        <headless>true</headless>
     </properties>
 
     <build>
@@ -46,8 +47,8 @@
                     <parallel>methods</parallel>
                     <threadCount>${threads}</threadCount>
                     <systemPropertyVariables>
-                         
                         <browser>${browser}</browser>
+                        <headless>${headless}</headless> 
                     </systemPropertyVariables>
                 </configuration>
                 <executions>
