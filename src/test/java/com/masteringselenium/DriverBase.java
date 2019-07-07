@@ -1,5 +1,6 @@
 package com.masteringselenium;
 
+import com.masteringselenium.config.DriverFactory;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;

@@ -24,6 +24,7 @@
         <maven-failsafe-plugin.version>2.21.0</maven-failsafe-plugin.version>
         <!-- Configurable variables -->
         <threads>1</threads>
+        <browser>chrome</browser>
     </properties>
 
     <build>
@@ -44,6 +45,10 @@
                 <configuration>
                     <parallel>methods</parallel>
                     <threadCount>${threads}</threadCount>
+                    <systemPropertyVariables>
+                         
+                        <browser>${browser}</browser>
+                    </systemPropertyVariables>
                 </configuration>
                 <executions>
                     <execution>
