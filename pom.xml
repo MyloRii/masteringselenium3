@@ -26,6 +26,7 @@
         <threads>1</threads>
         <browser>chrome</browser>
         <headless>true</headless>
+        <screenshotDirectory>${project.build.directory}/screenshots</screenshotDirectory>
     </properties>
 
     <build>
@@ -49,6 +50,7 @@
                     <systemPropertyVariables>
                         <browser>${browser}</browser>
                         <headless>${headless}</headless> 
+                        <screenshotDirectory>${screenshotDirectory}</screenshotDirectory>
                     </systemPropertyVariables>
                 </configuration>
                 <executions>
